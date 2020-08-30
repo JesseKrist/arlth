@@ -244,7 +244,7 @@ header {
 }
 .mobile_app {
 	height: 864px;
-	background: url(../src/img/bkg/moba_bg.png) center center / cover no-repeat;
+	background: url(../img/bkg/moba_bg.png) center center / cover no-repeat;
 	padding-top: 48px;
 	text-align: center;
 	h2 {
@@ -274,7 +274,7 @@ header {
 .mobile {
 	min-height: 864px;
 	padding-top: 48px;
-	background: url('../src/img/bkg/moba_bg.png') center center / cover no-repeat;
+	background: url('../img/bkg/moba_bg.png') center center / cover no-repeat;
 		h2 {
 			@include h2black;
 		}
@@ -424,7 +424,7 @@ header {
 
 .choise {
 	height: 896px;
-	background: url(../src/img/bkg/choise_bg.png) center center / cover no-repeat;
+	background: url(../img/bkg/choise_bg.png) center center / cover no-repeat;
 	padding-top: 57px;
 	text-align: center;
 
@@ -504,14 +504,14 @@ header {
 			&_ico_blue {
 				min-width: 21px;
 				height: 20px;
-				background-image: url(../src/img/vb.png);
+				background-image: url(../img/vb.png);
 				background-repeat: no-repeat;
 			}
 
 			&_ico_red {
 				min-width: 21px;
 				height: 20px;
-				background-image: url(../src/img/vr.png);
+				background-image: url(../img/vr.png);
 				background-repeat: no-repeat;
 			}
 		}
@@ -520,7 +520,7 @@ header {
 
 .maps {
 	min-height: 717px;
-	background: url(../src/img/bkg/maps_bg.png) center center / cover no-repeat;
+	background: url(../img/bkg/maps_bg.png) center center / cover no-repeat;
 	padding: 49px 0px 49px;
 	.boxy {
 		background-color: #ffffff;
@@ -633,7 +633,7 @@ header {
 				display: block;
 				width: 14px;
 				height: 15px;
-				background: url(/src/img/ic.svg) center center;
+				background: url(/img/ic.svg) center center;
 			}*/  
 
 			&:hover {
