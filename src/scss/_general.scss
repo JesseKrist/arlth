@@ -72,6 +72,23 @@ header {
     }
 }
 
+.burger_menu {
+	display: flex;
+	position: relative;
+	display: none;
+	&_bttn {
+		background-color: $blackl;
+		outline: none;
+		border: none;
+		&_lines {
+			height: 1px;
+			width: 20px;
+			background-color: $white;
+			margin-bottom: 3px;
+		}
+	}
+}
+
 .promo {
 	min-height: 799px;
 	background: url('../img/bkg/top_bg.png') center center / cover no-repeat;
