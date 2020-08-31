@@ -149,6 +149,32 @@ header {
 	border: none;
 	border-radius: 10px;
 	@include animote;
+	&_s {
+		width: 172px;
+		height: 46px;
+		margin-top: 19px;
+		background: $azure;
+		outline: none;
+		color: $white;
+		font-family: Roboto;
+		font-size: 14px;
+		font-weight: 400;
+		text-transform: uppercase;
+		border: none;
+		border-radius: 10px;
+		@include animote;
+		display: block;
+		margin: 118px auto;
+		width: 259px;
+		height: 63px;
+		font-size: 18px;
+		&:hover {
+			@include bttn-hover;
+			background-color: $blackl;
+			color: $azure;
+			box-shadow: 0 0 15px $azure, 0 0 10px $azure;
+		}
+	}
 }
 
 .call_o_b:hover {

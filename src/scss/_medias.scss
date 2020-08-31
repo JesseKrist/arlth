@@ -118,7 +118,8 @@
     .call_o_b {
         width: 110px;
         height: 22px;
-        font-size: 9px;   
+        font-size: 9px;
+        margin-top: 10px;
     }
 
     .call_i {
@@ -130,5 +131,9 @@
             width: 130px;
             height: 21px;
         }
+    }
+
+    .logo_contacts {
+        min-height: 60px;
     }
 }
