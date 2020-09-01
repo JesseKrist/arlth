@@ -120,6 +120,9 @@
         height: 22px;
         font-size: 9px;
         margin-top: 10px;
+        &_s {
+            margin-top: 0px;
+        }
     }
 
     .call_i {
@@ -135,5 +138,23 @@
 
     .logo_contacts {
         min-height: 60px;
+    }
+
+    .promo h1 {
+        font-size: 20px;
+    }
+
+    .promo h2 {
+        font-size: 30px;
+        margin-top: 0;
+    }
+
+    .promo_text {
+        display: none;
+    }
+
+    .promo {
+        height: 430px;
+        margin-bottom: 0;
     }
 }
