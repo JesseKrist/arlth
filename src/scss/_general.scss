@@ -149,6 +149,9 @@ header {
 	border: none;
 	border-radius: 10px;
 	@include animote;
+	&:focus {
+		outline: none;
+	}
 	&_s {
 		width: 172px;
 		height: 46px;
@@ -173,6 +176,10 @@ header {
 			background-color: $blackl;
 			color: $azure;
 			box-shadow: 0 0 15px $azure, 0 0 10px $azure;
+		}
+
+		&:focus {
+			outline: none;
 		}
 	}
 }
