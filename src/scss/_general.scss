@@ -28,7 +28,8 @@ header {
 .menu_link {
 	color: #ffffff;
 	font-size: 15px;
-	font-weight: 300;
+	font-weight: 300;		
+	
 	&:after {
 		content: '';
 		display: block;
@@ -76,6 +77,10 @@ header {
 	display: flex;
 	position: relative;
 	display: none;
+	button:focus {
+		outline: none;
+		border:none;
+	}
 	&_bttn {
 		background-color: $blackl;
 		outline: none;
@@ -86,6 +91,19 @@ header {
 			background-color: $white;
 			margin-bottom: 3px;
 		}
+		&_x {
+			display: none;
+			right: -3px;
+    		bottom: -20px;
+			position: absolute;
+			outline: none;
+			background: none;
+			border: none;
+			& img {
+				width: 30px;
+				height: 30px;
+			}
+		}	
 	}
 }
 
@@ -769,10 +787,31 @@ header {
 }
 
 #bgr_menu {
-	display: hidden;
+	display: none;
 	border: none;
 }
 
-.show {
-	display: none;
+.line-h {
+	&:after {
+		content: '';
+		display: block;
+		background-color: $azure;
+		height: 0px;
+		width: 0%;
+		opacity: 0.2;
+	}
 }
+	
+.line-v {
+	&:after {
+		content: '';
+		display: block;
+		transition-duration: 200ms;
+		background-color: $azure;
+		height: 1px;
+		width: 100%;
+		opacity: 1;
+		
+	}
+}
+
