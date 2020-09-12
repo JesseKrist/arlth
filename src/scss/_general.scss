@@ -52,7 +52,7 @@ header {
 		}
 	}
 
-	&:focus {
+	/*&:focus {
 		color: #ffffff;
 		text-decoration: none;
 		&:after {
@@ -63,7 +63,7 @@ header {
 			width: 100%;
 			opacity: 1;
 		}
-	}
+	}*/
 }
 .menu_item {
 	border-right: 2px dotted #0e0e0e;
@@ -795,11 +795,14 @@ header {
 .line-h {
 	&:after {
 		content: '';
+		transition-duration: 200ms;
 		display: block;
 		background-color: $azure;
+		position: relative;
+		top:15px;	
 		height: 0px;
-		width: 0%;
-		opacity: 0.2;
+		width: 100%;
+		opacity: 0.3;
 	}
 }
 	
@@ -809,9 +812,13 @@ header {
 		display: block;
 		transition-duration: 200ms;
 		background-color: $azure;
-		height: 1px;
 		width: 100%;
 		opacity: 1;
+		height: 2px;
+		top: 0px;
+		overflow: hidden;
+		width: 100%;
+		position: relative;	
 		
 	}
 }
