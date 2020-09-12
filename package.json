@@ -1,7 +1,0 @@
-{
-  "requires": true,
-  "lockfileVersion": 1,
-  "dependencies": {
-    "jquery-visible": "^1.2.0"
-  }
-}
