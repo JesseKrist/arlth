@@ -1,4 +1,43 @@
-$menuState = false
+let loadingp = $('.preloader');
+$(window).width();
+var width = $(window).width(); 
+var height = $(window).height(); 
+
+$menuState = 
+
+$(window).scroll(function() {
+if ((width <= 767)) {
+    $menuState = false
+    $(window).scroll(function() {
+        
+
+        if ($('.promo').visible(true)) {
+            // The element is visible, do something
+            $('.home').removeClass('line-h') && $('.home').addClass('line-v');
+        
+        } else if ($('.ico_blocks_t').visible(true)) {
+            // The element is visible, do something
+            $('.priorit').removeClass('line-h') && $('.priorit').addClass('line-v');
+    
+        } else if ($('#xdd').visible(true)) {
+            // The element is visible, do something
+            $('.reqs').removeClass('line-h') && $('.reqs').addClass('line-v');
+        
+        } else if ($('.blinks').visible(true)) {
+            // The element is visible, do something
+            $('.contacts').removeClass('line-h') && $('.contacts').addClass('line-v');
+        } 
+        
+        else {
+            // The element is NOT visible, do something else
+            $('.menu_item').removeClass('line-v') && $('.menu_item').addClass('line-h');
+        }  
+    });           
+}
+
+}); 
+
+
 
 $(document).ready(function () {
     $('#lolz').click(function(){
@@ -107,29 +146,11 @@ $(".menu_item_l").click(function() {
 				$heading.find('span').text(isVisible);
 
             }
-$(window).scroll(function() {
-    if ($('.ico_blocks_t').visible(true)) {
-        // The element is visible, do something
-        $('.priorit').removeClass('line-h') && $('.priorit').addClass('line-v');
 
-    } else if ($('.promo').visible(true)) {
-        // The element is visible, do something
-        $('.home').removeClass('line-h') && $('.home').addClass('line-v');
-    
-    } else if ($('#xdd').visible(true)) {
-        // The element is visible, do something
-        $('.reqs').removeClass('line-h') && $('.reqs').addClass('line-v');
-    
-    } else if ($('.blinks').visible(true)) {
-        // The element is visible, do something
-        $('.contacts').removeClass('line-h') && $('.contacts').addClass('line-v');
-    } 
-    
-    else {
-        // The element is NOT visible, do something else
-        $('.menu_item').removeClass('line-v') && $('.menu_item').addClass('line-h');
-    }  
-});           
+            $(window).on('load', function() {
+                loadingp.fadeOut().end().delay(400).fadeOut('slow');
+                return false;
+            });
             
 
 

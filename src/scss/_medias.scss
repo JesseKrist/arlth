@@ -210,15 +210,7 @@
         text-transform: uppercase;
         font-size: 24px;
         border-right: none;
-        &:after {
-			content: '';
-			display: block;
-			transition-duration: 200ms;
-			background-color: white;
-			height: 1px;
-			width: 100%;
-			opacity: 1;
-		}
+        
     }
 
     #bgr_menu {
