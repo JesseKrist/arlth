@@ -3,40 +3,48 @@ $(window).width();
 var width = $(window).width(); 
 var height = $(window).height(); 
 
-$menuState = 
+$menuState = false;
 
 $(window).scroll(function() {
 if ((width <= 767)) {
-    $menuState = false
-    $(window).scroll(function() {
-        
-
-        if ($('.promo').visible(true)) {
-            // The element is visible, do something
-            $('.home').removeClass('line-h') && $('.home').addClass('line-v');
-        
-        } else if ($('.ico_blocks_t').visible(true)) {
-            // The element is visible, do something
-            $('.priorit').removeClass('line-h') && $('.priorit').addClass('line-v');
-    
-        } else if ($('#xdd').visible(true)) {
-            // The element is visible, do something
-            $('.reqs').removeClass('line-h') && $('.reqs').addClass('line-v');
-        
-        } else if ($('.blinks').visible(true)) {
-            // The element is visible, do something
-            $('.contacts').removeClass('line-h') && $('.contacts').addClass('line-v');
-        } 
-        
-        else {
-            // The element is NOT visible, do something else
-            $('.menu_item').removeClass('line-v') && $('.menu_item').addClass('line-h');
-        }  
-    });           
+    $menuState = false           
 }
-
 }); 
 
+$(window).scroll(function() {
+    if ($('.promo').visible(true)) {
+        // The element is visible, do something
+        $('.menu_item').removeClass('line-v') && $('.menu_item').addClass('line-h');
+        $('.home').removeClass('line-h') && $('.home').addClass('line-v');
+    
+    } else if ($('.ico_desc').visible(true)) {
+        // The element is visible, do something
+        $('.menu_item').removeClass('line-v') && $('.menu_item').addClass('line-h');
+        $('.priorit').removeClass('line-h') && $('.priorit').addClass('line-v');
+
+    } else if ($('.mobile').visible(true)) {
+        $('.menu_item').removeClass('line-v') && $('.menu_item').addClass('line-h');
+        $('.mob-app').removeClass('line-h') && $('.mob-app').addClass('line-v');
+    
+    } else if ($('.terms').visible(true)) {
+        // The element is visible, do something
+        $('.menu_item').removeClass('line-v') && $('.menu_item').addClass('line-h');
+        $('.reqs').removeClass('line-h') && $('.reqs').addClass('line-v');
+
+    } else if ($('.blinks').visible(true)) {
+        
+        $('.contacts').removeClass('line-h') && $('.contacts').addClass('line-v');
+        
+    }
+     else if ($('.maps').visible(true)) {
+        
+        $('.location').removeClass('line-h') && $('.location').addClass('line-v');
+        
+    } else {
+        // The element is NOT visible, do something else
+        $('.menu_item').removeClass('line-v') && $('.menu_item').addClass('line-h');
+    }
+});
 
 
 $(document).ready(function () {
@@ -68,7 +76,7 @@ $(document).ready(function () {
 
 
 
-$(".home").click(function() {
+$(".home-brgr").click(function() {
     $('html, body').animate({
         scrollTop: $(".promo").offset().top
     }, 1000);
@@ -79,7 +87,7 @@ $(".home").click(function() {
     $('#lolz').slideDown(200);
     $menuState = true;
 });
-$(".priorit").click(function() {
+$(".priorit-brgr").click(function() {
     $('html, body').animate({
         scrollTop: $(".ico_desc").offset().top
     }, 1000);
@@ -90,7 +98,7 @@ $(".priorit").click(function() {
     $('#lolz').slideDown(200);
     $menuState = true;
 });
-$(".ceo-car").click(function() {
+$(".mob-app-brgr").click(function() {
     $('html, body').animate({
         scrollTop: $(".terms").offset().top
     }, 1000);
@@ -102,7 +110,7 @@ $(".ceo-car").click(function() {
     $menuState = true;
     console.log('Set to true-works')
 });
-$(".reqs").click(function() {
+$(".reqs-brgr").click(function() {
     $('html, body').animate({
         scrollTop: $("#reqp").offset().top
     }, 1000);
@@ -113,7 +121,7 @@ $(".reqs").click(function() {
     $('#lolz').slideDown(200);
     $menuState = true;
 });
-$(".contacts").click(function() {
+$(".contacts-brgr").click(function() {
     $('html, body').animate({
         scrollTop: $(".blinks").offset().top
     }, 500);
@@ -124,7 +132,7 @@ $(".contacts").click(function() {
     $('#lolz').slideDown(200);
     $menuState = true;
 });
-$(".menu_item_l").click(function() {
+$(".location-brgr").click(function() {
     $('html, body').animate({
         scrollTop: $(".promo_text").offset().top
     }, 1000);
