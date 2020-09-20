@@ -1,7 +1,7 @@
 html {
 	scroll-behavior: smooth;
   }
-  
+
 nav {
 	height: 50px;
 	background-color: #212121;
@@ -845,5 +845,13 @@ header {
 	}
 }
 
+.vh {
+	visibility: hidden;
+	display: none;
+}
+
+.vv {
+	visibility: visible;
+}
 
 

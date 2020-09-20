@@ -3,43 +3,41 @@ $(window).width();
 var width = $(window).width(); 
 var height = $(window).height(); 
 
-$menuState = false;
+$menuState = false
 
 $(window).scroll(function() {
-if ((width <= 767)) {
-    $menuState = false           
-}
-}); 
-
-$(window).scroll(function() {
+    $('#lolzx').hide(200);
+    $('#lolz').show(200);
     if ($('.promo').visible(true)) {
         // The element is visible, do something
         $('.menu_item').removeClass('line-v') && $('.menu_item').addClass('line-h');
-        $('.home').removeClass('line-h') && $('.home').addClass('line-v');
-    
+        $('.menu_item').hide() && $('.home-brgr').show().fadeIn(500);
+        $('#tzt').fadeIn(500)
+ 
     } else if ($('.ico_desc').visible(true)) {
         // The element is visible, do something
         $('.menu_item').removeClass('line-v') && $('.menu_item').addClass('line-h');
         $('.priorit').removeClass('line-h') && $('.priorit').addClass('line-v');
-
+        $('.menu_item').hide() && $('.priorit-brgr').show();
     } else if ($('.mobile').visible(true)) {
         $('.menu_item').removeClass('line-v') && $('.menu_item').addClass('line-h');
         $('.mob-app').removeClass('line-h') && $('.mob-app').addClass('line-v');
-    
+        $('.menu_item').hide() && $('.mob-app-brgr').show();
     } else if ($('.terms').visible(true)) {
         // The element is visible, do something
         $('.menu_item').removeClass('line-v') && $('.menu_item').addClass('line-h');
         $('.reqs').removeClass('line-h') && $('.reqs').addClass('line-v');
+        $('.menu_item').hide() && $('.reqs-brgr').show();
 
     } else if ($('.blinks').visible(true)) {
         
         $('.contacts').removeClass('line-h') && $('.contacts').addClass('line-v');
-        
+        $('.menu_item').hide() && $('.contacts-brgr').show();
     }
      else if ($('.maps').visible(true)) {
         
         $('.location').removeClass('line-h') && $('.location').addClass('line-v');
-        
+        $('.menu_item').hide() && $('.location-brgr').show();
     } else {
         // The element is NOT visible, do something else
         $('.menu_item').removeClass('line-v') && $('.menu_item').addClass('line-h');
@@ -49,36 +47,50 @@ $(window).scroll(function() {
 
 $(document).ready(function () {
     $('#lolz').click(function(){
-        if($menuState == false) {
-            $('#tzt').slideToggle(500).fadeIn(500);
-            $('#lolz').slideUp(200);
-            $('#lolzx').slideDown(200);
-            console.log('Op if==false-works')
-        } else if($menuState == true) {
-            $('#tzt').slideToggle()
+        if ($menuState == false) {
+        $('#tzt').show(500);
+        $('#lolzx').slideToggle(200);
+        $('#lolz').slideToggle(200);
+        $('.menu_item').show(500);
+        $menuState = false;
+        console.log(' burger if== false than set to true')
+        } else if ($menuState == true) {
+            $('.menu_item').hide();
+            $('#tzt').slideToggle();
             $('.menu_item').show();
-            $('#tzt').slideToggle(500).fadeIn(500);
-            $('#lolz').slideUp(200);
-            $('#lolzx').slideDown(200);
+            $('#tzt').slideToggle();
+            $('#lolzx').slideToggle(200);
+            $('#lolz').slideToggle(200); 
             $menuState=false;
-            console.log('Op if==true-works')
-
+            console.log(' burger if== true than set to false')  
         }
         
+            
     });
     $('#lolzx').click(function(){
-        $('#tzt').slideToggle(500);
-        $('#lolzx').slideUp(200);
-        $('#lolz').slideDown(200);
+        if($menuState == false) {
+          $('#tzt').slideToggle(500);
+            $('#lolzx').slideToggle(200);
+            $('#lolz').slideToggle(200);
+            console.log(' X if== false than set to true')  
+        } else if ($menuState == true) {
+            $('#tzt').slideToggle(500);
+            $('.menu_item').hide();
+            $('.menu_item').show();
+            $('#lolzx').slideToggle(200);
+            $('#lolz').slideToggle(200);
+            console.log(' X if== true than set to false')  
+        }
+            
+            
     });
 
 });
-
 
 
 $(".home-brgr").click(function() {
     $('html, body').animate({
-        scrollTop: $(".promo").offset().top
+        scrollTop: $("#promo-id").offset().top
     }, 1000);
 
     $('.menu_item').slideToggle(500);
@@ -86,10 +98,12 @@ $(".home-brgr").click(function() {
     $('#lolzx').slideUp(200);
     $('#lolz').slideDown(200);
     $menuState = true;
+    console.log(' link set to true')
 });
+
 $(".priorit-brgr").click(function() {
     $('html, body').animate({
-        scrollTop: $(".ico_desc").offset().top
+        scrollTop: $("#ico_desc-id").offset().top
     }, 1000);
 
     $('.menu_item').slideToggle(500);
@@ -97,10 +111,12 @@ $(".priorit-brgr").click(function() {
     $('#lolzx').slideUp(200);
     $('#lolz').slideDown(200);
     $menuState = true;
+    console.log(' link set to true')
 });
+
 $(".mob-app-brgr").click(function() {
     $('html, body').animate({
-        scrollTop: $(".terms").offset().top
+        scrollTop: $("#mobile-id").offset().top
     }, 1000);
 
     $('.menu_item').slideToggle(500);
@@ -108,11 +124,12 @@ $(".mob-app-brgr").click(function() {
     $('#lolzx').slideUp(200);
     $('#lolz').slideDown(200);
     $menuState = true;
-    console.log('Set to true-works')
+    console.log(' link set to true')
 });
+
 $(".reqs-brgr").click(function() {
     $('html, body').animate({
-        scrollTop: $("#reqp").offset().top
+        scrollTop: $("#terms-id").offset().top
     }, 1000);
 
     $('.menu_item').slideToggle(500);
@@ -120,10 +137,12 @@ $(".reqs-brgr").click(function() {
     $('#lolzx').slideUp(200);
     $('#lolz').slideDown(200);
     $menuState = true;
+    console.log(' link set to true')
 });
+
 $(".contacts-brgr").click(function() {
     $('html, body').animate({
-        scrollTop: $(".blinks").offset().top
+        scrollTop: $("#blinks-id").offset().top
     }, 500);
 
     $('.menu_item').slideToggle(500);
@@ -131,10 +150,12 @@ $(".contacts-brgr").click(function() {
     $('#lolzx').slideUp(200);
     $('#lolz').slideDown(200);
     $menuState = true;
+    console.log(' link set to true')
 });
+
 $(".location-brgr").click(function() {
     $('html, body').animate({
-        scrollTop: $(".promo_text").offset().top
+        scrollTop: $("#maps-id").offset().top
     }, 1000);
 
     $('.menu_item').slideToggle(500);
@@ -142,8 +163,8 @@ $(".location-brgr").click(function() {
     $('#lolzx').slideUp(200);
     $('#lolz').slideDown(200);
     $menuState = true;
-});
-
+    console.log(' link set to true') 
+});   
 
 
 			// Helper visible check funtion
