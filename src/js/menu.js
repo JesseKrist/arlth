@@ -2,7 +2,7 @@ let loadingp = $('.preloader');
 $(window).width();
 
 $menuState = false
-
+$(window).resize(function() {
 if ($(window).width() <= 767) { 
     $(window).scroll(function() {
 
@@ -38,40 +38,45 @@ if ($(window).width() <= 767) {
     }
 
 });
+} else {
+    location.reload();
+    $(window).scroll(function() {
+
+        if ($('.promo').visible(true)) {
+            // The element is visible, do something
+            $('.menu_item').removeClass('line-v') && $('.menu_item').addClass('line-h');
+            $('.home').removeClass('line-h') && $('.home').addClass('line-v');
+     
+        } else if ($('.ico_desc').visible(true)) {
+            // The element is visible, do something
+            $('.menu_item').removeClass('line-v') && $('.menu_item').addClass('line-h');
+            $('.priorit').removeClass('line-h') && $('.priorit').addClass('line-v');
+    
+        } else if ($('.mobile').visible(true)) {
+            $('.menu_item').removeClass('line-v') && $('.menu_item').addClass('line-h');
+            $('.mob-app').removeClass('line-h') && $('.mob-app').addClass('line-v');
+    
+        } else if ($('.terms').visible(true)) {
+            // The element is visible, do something
+            $('.menu_item').removeClass('line-v') && $('.menu_item').addClass('line-h');
+            $('.reqs').removeClass('line-h') && $('.reqs').addClass('line-v');
+    
+        } else if ($('.blinks').visible(true)) {
+            
+            $('.contacts').removeClass('line-h') && $('.contacts').addClass('line-v');
+        }
+         else if ($('.maps').visible(true)) {
+            
+            $('.location').removeClass('line-h') && $('.location').addClass('line-v');
+        } else {
+            // The element is NOT visible, do something else
+            $('.menu_item').removeClass('line-v') && $('.menu_item').addClass('line-h');
+        }
+    });
 }
-
-$(window).scroll(function() {
-    if ($('.promo').visible(true)) {
-        // The element is visible, do something
-        $('.menu_item').removeClass('line-v') && $('.menu_item').addClass('line-h');
-        $('.home').removeClass('line-h') && $('.home').addClass('line-v');
- 
-    } else if ($('.ico_desc').visible(true)) {
-        // The element is visible, do something
-        $('.menu_item').removeClass('line-v') && $('.menu_item').addClass('line-h');
-        $('.priorit').removeClass('line-h') && $('.priorit').addClass('line-v');
-
-    } else if ($('.mobile').visible(true)) {
-        $('.menu_item').removeClass('line-v') && $('.menu_item').addClass('line-h');
-        $('.mob-app').removeClass('line-h') && $('.mob-app').addClass('line-v');
-
-    } else if ($('.terms').visible(true)) {
-        // The element is visible, do something
-        $('.menu_item').removeClass('line-v') && $('.menu_item').addClass('line-h');
-        $('.reqs').removeClass('line-h') && $('.reqs').addClass('line-v');
-
-    } else if ($('.blinks').visible(true)) {
-        
-        $('.contacts').removeClass('line-h') && $('.contacts').addClass('line-v');
-    }
-     else if ($('.maps').visible(true)) {
-        
-        $('.location').removeClass('line-h') && $('.location').addClass('line-v');
-    } else {
-        // The element is NOT visible, do something else
-        $('.menu_item').removeClass('line-v') && $('.menu_item').addClass('line-h');
-    }
 });
+
+
 
 
 $(document).ready(function () {
